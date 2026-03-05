@@ -26,7 +26,20 @@ def main() -> None:
         placeholder="Ex: 1A2b3C4d5E6f7G8h9I0j..."
     )
 
-    st.info("💡 Certifique-se de que a planilha possui as colunas 'Site', 'telefone_ia' e 'email_ia' na primeira linha.")
+    # ==========================================
+    # 📝 INSTRUÇÕES PARA O RECRUTADOR/USUÁRIO
+    # ==========================================
+    with st.expander("🛠️ Como testar esta aplicação? (Leia antes de iniciar)"):
+        st.markdown("""
+        Para que a Inteligência Artificial consiga ler e enriquecer os seus dados, siga estes 3 passos simples:
+        
+        1. **Formato Correto:** Certifique-se de que o arquivo é um **Google Sheets** nativo. Se você fez upload de um Excel (`.xlsx`), vá em *Arquivo > Salvar como Planilhas Google*.
+        2. **Estrutura de Colunas:** A primeira linha da planilha (cabeçalho) deve conter obrigatoriamente as colunas exatas: `Site`, `telefone_ia` e `email_ia`.
+        3. **Permissão de Acesso:** O nosso robô precisa de permissão para editar a sua planilha. Clique em "Compartilhar" no Google Sheets e adicione o e-mail abaixo como **Editor**:
+        """)
+        # st.code cria uma caixinha com um botão de "copiar" automático!
+        st.code("robozinho@busca-imagens-394515.iam.gserviceaccount.com", language="text")
+    # ==========================================
 
     # 2. Área de Logs Persistente
     st.markdown("### Logs de Execução")
