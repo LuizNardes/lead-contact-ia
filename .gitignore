@@ -1,0 +1,14 @@
+echo "# Ambientes Virtuais
+venv/
+env/
+.env
+
+# Secrets do Streamlit
+.streamlit/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Logs de Debug
+debug_scraper.txt" > .gitignore
